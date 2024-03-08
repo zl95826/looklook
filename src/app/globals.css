@@ -31,3 +31,29 @@ body {
     text-wrap: balance;
   }
 }
+
+.offcanvas {
+  position: fixed;
+  right: -80vw;
+  top: 0;
+  width: 80vw;
+  height: 100vh;
+  background: #fff;
+  transition: all 0.2s ease-in-out 0.1s;
+}
+.offcanvas.show {
+  right: 0;
+}
+
+.offcanvas-backdrop {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /*Don't try to use display:block or none to control the backdrop, otherwise lg:hidden won't work */
+}
+.offcanvas-backdrop.show {
+  left: 0; /*Don't try to use display:block or none to control the backdrop, otherwise lg:hidden won't work */
+}
